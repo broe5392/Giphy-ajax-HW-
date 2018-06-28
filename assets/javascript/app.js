@@ -44,26 +44,26 @@ $("button").on("click", function(){
             var p = $("<p>").text("rating: " + rating);
             var personImage = $("<img>");
             personImage.attr("src", results[i].images.fixed_height.url);
-            personImage.attr('data-still', results[i].images.fixed_height_still.url);
-            personImage.attr('data-animate', results[i].images.fixed_height.url);
-            personimage.attr('data-state', 'still');
-            personImage.addClass('personImage');
+          //  personImage.attr('data-still', results[i].images.fixed_height_still.url);
+          //  personImage.attr('data-animate', results[i].images.fixed_height.url);
+          //  personimage.attr('data-state', 'still');
+          //  personImage.addClass('personImage');
             gifDiv.prepend(p);
             gifDiv.prepend(personImage);
             $("#gifs").prepend(gifDiv);
         }
 
-        $('.personImage').on("click", function(){
-            var state = $(this).attr('data-state');
+        //$('.personImage').on("click", function(){
+          //  var state = $(this).attr('data-state');
 
-                if(state === 'still'){
-                    $(this).attr('src', $(this).data('animate'));
-                    $(this).attr('data-state', 'animate');
-                }else{
-                    $(this).attr('src', $(this).data('still'));
-                    $(this).attr('data-state', 'still');
-                }
-        })
+            //    if(state === 'still'){
+              //      $(this).attr('src', $(this).data('animate'));
+                //    $(this).attr('data-state', 'animate');
+                //}else{
+                  //  $(this).attr('src', $(this).data('still'));
+                    //$(this).attr('data-state', 'still');
+                //}
+       // })
     })
     // had code working.. tried to add the still and animate to my code and everything broke. also when it was working and i added a button my buttons also broke but worked before i added a new one
 });
